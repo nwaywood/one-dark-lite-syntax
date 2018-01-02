@@ -1,0 +1,60 @@
+.syntax--source.syntax--gfm {
+  .syntax--markup {
+    -webkit-font-smoothing: auto;
+    &.syntax--heading {
+      color: @red;
+      font-weight: bold;
+    }
+    // link
+    &.syntax--underline {
+      color: @cyan;
+      text-decoration: underline;
+    }
+  }
+  .syntax--bold {
+    color: @orange;
+    font-weight: bold;
+  }
+  .syntax--italic {
+    color: @purple;
+    font-style: italic;
+  }
+  // markdown ``
+  .syntax--raw {
+    color: @green;
+  }
+  // list - char
+  .syntax--list {
+    color: @red;
+  }
+
+  .syntax--changed {
+    color: @purple;
+  }
+
+  .syntax--deleted {
+    color: @red;
+  }
+
+  .syntax--inserted {
+    color: @green;
+  }
+
+  .syntax--quote {
+    color: @orange;
+  }
+
+  .syntax--raw.syntax--inline {
+    color: @green;
+  }
+
+  .syntax--link {
+    // link title surrounding [] brackets
+    // color: @light-gray;
+
+    // link title
+    .syntax--entity {
+      color: @blue;
+    }
+  }
+}

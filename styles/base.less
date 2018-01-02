@@ -1,0 +1,225 @@
+@import "syntax-variables";
+
+// Syntax styles
+
+.syntax--comment {
+  color: @gray;
+  font-style: italic;
+}
+
+.syntax--keyword {
+  // flow 'type' keyword
+  color: @syntax-color-keyword;
+
+  &.syntax--control {
+    // 'import', 'from', 'switch' etc
+    color: @syntax-color-keyword;
+  }
+
+  &.syntax--operator {
+    // >, <, >= etc
+    color: @syntax-color-operator;
+  }
+
+  &.syntax--other.syntax--special-method {
+    // color: @pink;
+    color: @syntax-color-method;
+  }
+
+  &.syntax--other.syntax--unit {
+    // color: @pink;
+    color: @orange;
+  }
+}
+
+.syntax--storage {
+  // 'const', '=>' etc and flow function names :(
+  color: @syntax-color-keyword;
+}
+
+.syntax--constant {
+  color: @syntax-color-constant;
+
+  &.syntax--character.syntax--escape {
+    color: @cyan;
+  }
+
+  &.syntax--numeric {
+    // numbers
+    color: @syntax-color-constant;
+  }
+
+  &.syntax--other.syntax--color {
+    color: @cyan;
+  }
+
+  &.syntax--other.syntax--symbol {
+    color: @green;
+  }
+
+  &.syntax--other {
+    // MY_CONSTS
+    color: @syntax-color-constant;
+  }
+}
+
+.syntax--variable {
+  color: @syntax-color-variable;
+
+  // if want finer grained control of variable colors in JS:
+  // color: syntax--property, syntax--object, syntax--readwrite
+
+  &.syntax--interpolation {
+    color: darken(@syntax-color-variable, 10%);
+  }
+
+  &.syntax--parameter.syntax--function {
+    color: @syntax-text-color;
+  }
+}
+
+.syntax--invalid.syntax--illegal {
+  background-color: @red;
+  color: @syntax-background-color;
+}
+
+.syntax--string {
+  color: @syntax-color-string;
+
+  &.syntax--regexp {
+    color: @cyan;
+
+    .syntax--source.syntax--ruby.syntax--embedded {
+      color: @orange;
+    }
+  }
+
+  &.syntax--other.syntax--link {
+    color: @red;
+  }
+}
+
+.syntax--punctuation {
+  &.syntax--definition {
+    &.syntax--comment {
+      color: @gray;
+    }
+
+    &.syntax--string,
+    &.syntax--variable,
+    &.syntax--parameters,
+    &.syntax--array {
+      color: @syntax-text-color;
+    }
+
+    &.syntax--heading,
+    &.syntax--identity {
+      color: @blue;
+    }
+
+    &.syntax--bold {
+      color: @yellow;
+      font-weight: bold;
+    }
+
+    &.syntax--italic {
+      color: @purple;
+      font-style: italic;
+    }
+  }
+
+  &.syntax--section.syntax--embedded {
+    color: @syntax-color-jsx-braces;
+  }
+}
+
+.syntax--support {
+  &.syntax--class {
+    // jsx and some classes e.g. JSON in JSON.stringify()
+    color: @syntax-color-jsx-tag;
+  }
+  &.syntax--type {
+    color: @cyan;
+  }
+
+  &.syntax--function {
+    color: @syntax-color-function;
+
+    &.syntax--any-method {
+      color: @syntax-color-method;
+    }
+  }
+}
+
+.syntax--entity {
+  &.syntax--name.syntax--function {
+    color: @syntax-color-function;
+  }
+  // This doesn't seem to effect JS at all, but it changes Go
+  // &.syntax--name.syntax--type {
+  //   color: @yellow;
+  //   text-decoration: underline;
+  // }
+  &.syntax--other.syntax--inherited-class {
+    color: @syntax-color-class;
+  }
+  &.syntax--name.syntax--class,
+  &.syntax--name.syntax--type,
+  &.syntax--name.syntax--type.syntax--class {
+    color: @syntax-color-class;
+  }
+
+  &.syntax--name.syntax--section {
+    color: @blue;
+  }
+
+  &.syntax--name.syntax--tag {
+    color: @syntax-color-tag;
+    // text-decoration: underline;
+  }
+  // &.syntax--name.syntax--instance {
+  //   color: @pink;
+  // }
+
+  &.syntax--other.syntax--attribute-name {
+    color: @syntax-color-attribute;
+
+    &.syntax--id {
+      color: @blue;
+    }
+  }
+}
+
+.syntax--meta {
+  // braces (), {}, and colon, comma, <> etc
+  &.syntax--class {
+    color: @syntax-text-color;
+  }
+
+  &.syntax--link {
+    color: @orange;
+  }
+
+  &.syntax--require {
+    color: @blue;
+  }
+
+  &.syntax--selector {
+    color: @purple;
+  }
+
+  &.syntax--separator {
+    background-color: @gray;
+    color: @syntax-text-color;
+  }
+}
+
+.syntax--none {
+  color: @syntax-text-color;
+}
+
+// Mini editor
+
+atom-text-editor[mini] .scroll-view {
+  padding-left: 1px;
+}

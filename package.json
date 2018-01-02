@@ -1,0 +1,12 @@
+{
+  "name": "one-dark-lite-syntax",
+  "theme": "syntax",
+  "version": "0.0.0",
+  "description": "One dark syntax theme for Atom with a lighter feel",
+  "keywords": ["syntax", "theme"],
+  "repository": "https://github.com/nwaywood/one-dark-lite-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
