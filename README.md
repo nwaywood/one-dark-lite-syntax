@@ -8,9 +8,17 @@ I love the one-dark theme however I feel it is a little visually 'heavy' (especi
 * `purple` is exclusively used for keywords - in `one-dark` purple is used for keywords but also for some other minor things
 * Other misc differences
 
-![A screenshot of your theme](https://f.cloud.github.com/assets/69169/2289498/4c3cb0ec-a009-11e3-8dbd-077ee11741e5.gif)
+## Screenshot
 
-Inspiration:
+One-dark-lite theme:
+
+![One dark lite theme](./screenshots/one-dark-lite.png)
+
+And here is the one-dark theme of the same code for comparison:
+
+![One dark theme](./screenshots/one-dark.png)
+
+## Inspiration
 
 * [one-dark-syntax](https://github.com/atom/one-dark-syntax)
 * [one-dark-pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme)
